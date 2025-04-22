@@ -1,0 +1,54 @@
+Zod is full fill the gap of runtime while typescript have the compile 
+time here
+
+in modlas we use the doucment which is for type safty purpose
+
+
+how to export the models in next js 
+here we can be use the two way in next js
+
+const UserModels = (mongoos.modles.User as mongoose.Model<User>)
+ ||(mongoose.model<User>("User", UserSchema))
+
+next js is the edge time framwork (application not execute continously
+while execute when the user request is coming all the function is run
+on time. all time not application is not running so db connection is also
+so check the db connection if the db is connect then use otherwise 
+create the connection of the db);
+
+
+Auth
+two files options and route => then go to the provider of the auth docs
+provider
+pages, callbacks
+
+if we use the next-auth with typescript then create the some time
+issue here then we slove it by change the types of module 
+and make the separete file here which is next-auth.d.ts
+
+declare module 'next-auth' {
+
+}
+
+In this project we made the check-user-uniqe name for this 
+when user is type then gave the suggestion user is exsist or not
+
+const {searchParams} = new URL(request.url);
+const queryParam = {
+ username: searchParam.get("username")
+}
+
+
+
+https://www.amanmanazir.com/coaching/
+
+“Explain [Topic] to me like I’m a 5-year-old.”
+ “Give me a 5-minute crash course on [Topic].”
+“What are the top 5 resources to learn [Skill/Topic]?”
+“Create a step-by-step plan to master [Skill] in 30 days.”
+“Can you quiz me on [Topic]?”
+What are the common mistakes beginners make in [Topic]?”
+“Explain the pros and cons of [Topic] with examples.”
+ “Summarize the most important concepts in [Topic].”
+“Turn [Concept] into a story for better understanding.”
+“How can I practice [Skill/Topic] daily to improve faster?”
